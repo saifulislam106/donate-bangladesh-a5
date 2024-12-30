@@ -24,7 +24,7 @@
           </div>
           <div class="flex gap-2 items-center">
             <img src="./images/coin.png" alt="" />
-            <p class="text-2xl font-semibold">9500</p>
+            <p id="donation-money" class="text-2xl font-semibold">9500</p>
             <p class="text-2xl font-semibold">BDT</p>
           </div>
         </div>
@@ -46,7 +46,7 @@
         <div class="w-1/2 p-4 space-y-4">
           <div class="flex gap-2 items-center">
             <img src="./images/coin.png" alt="" />
-            <p class="text-2xl font-semibold">9500</p>
+            <p id="donation-fund" class="text-2xl font-semibold">0</p>
             <p class="text-2xl font-semibold">BDT</p>
           </div>
           <h3 class="text-2xl font-bold">
@@ -61,12 +61,13 @@
             need.
           </p>
           <input
+          id="input-field"
             type="text"
             placeholder="Type here"
             class="input input-bordered w-full"
           />
           <div>
-            <button class="btn w-full mt-4 bg-lime-400">Donate Now</button>
+            <button id="donate-btn" class="btn w-full mt-4 bg-lime-400">Donate Now</button>
           </div>
         </div>
       </div>
@@ -142,5 +143,20 @@
         </div>
       </div>
     </main>
+
+    <script>
+      document.getElementById("donate-btn").addEventListener("click" , function(){
+        const inputField = parseFloat(document.getElementById("input-field").value);
+        // console.log(inputField);
+        const donationFund = parseFloat(document.getElementById("donation-fund").innerText);
+        const donateMoney = parseFloat(document.getElementById("donation-money").innerText);
+        const newDonationMoney = donateMoney -inputField
+        // console.log(donationFund);
+        const newDonationFund = donationFund + inputField;
+        document.getElementById("donation-fund").innerText=newDonationFund
+        document.getElementById("donation-money").innerText=newDonationMoney
+        
+      })
+    </script>
   </body>
 </html>
