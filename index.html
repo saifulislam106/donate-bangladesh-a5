@@ -12,9 +12,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="sticky">
-      <nav class="bg-slate-100 h-52 lg:32">
-        <div class="lg:flex sm:space-y-4 pt-6 justify-between container mx-auto">
+    <header>
+      <nav class="bg-slate-100 h-52 lg:h-32">
+        <div
+          class="lg:flex sm:space-y-4 pt-6 justify-between container mx-auto"
+        >
           <div>
             <button class="btn bg-lime-400">Blog</button>
           </div>
@@ -62,13 +64,18 @@
             need.
           </p>
           <input
-          id="noakhali-floode-input-field"
+            id="noakhali-floode-input-field"
             type="text"
             placeholder="Please amount here"
             class="input input-bordered w-full"
           />
           <div>
-            <button id="noakhali-donate-btn" class="btn w-full mt-4 bg-lime-400">Donate Now</button>
+            <button
+              id="noakhali-donate-btn"
+              class="btn w-full mt-4 bg-lime-400"
+            >
+              Donate Now
+            </button>
           </div>
         </div>
       </div>
@@ -100,21 +107,23 @@
             need.
           </p>
           <input
-          id="feni-floode-input-field"
+            id="feni-floode-input-field"
             type="text"
             placeholder="Please amount here"
             class="input input-bordered w-full"
           />
           <div>
-            <button id="feni-donate-btn" class="btn w-full mt-2 bg-lime-400">Donate Now</button>
+            <button id="feni-donate-btn" class="btn w-full mt-2 bg-lime-400">
+              Donate Now
+            </button>
           </div>
         </div>
       </div>
+
+      <!-- Quota donation  -->
       <div
         class="lg:flex gap-8 mt-8 bg-white shadow-2xl rounded-md p-10 border-slate-100"
       >
-
-      <!-- Quota donation  -->
         <div class="lg:w-1/2">
           <img class="w-full h-96" src="./images/quota-protest.png" alt="" />
         </div>
@@ -139,19 +148,21 @@
             their time of need.
           </p>
           <input
-          id="quota-input-field"
+            id="quota-input-field"
             type="text"
             placeholder="Please amount here"
             class="input input-bordered w-full"
           />
           <div>
-            <button id="quota-donate-btn" class="btn w-full mt-2 bg-lime-400">Donate Now</button>
+            <button id="quota-donate-btn" class="btn w-full mt-2 bg-lime-400">
+              Donate Now
+            </button>
           </div>
         </div>
       </div>
     </main>
 
- <script src="./utils.js"></script>
- <script src="./script.js"></script>
+    <script src="./utils.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
