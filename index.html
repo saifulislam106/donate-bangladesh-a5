@@ -37,6 +37,7 @@
       </div>
     </header>
     <main class="container mx-auto mt-12 relative">
+      <!-- Noakhali floode  -->
       <div
         class="flex gap-8 mt-8 bg-white shadow-2xl rounded-md p-10 border-slate-100"
       >
@@ -46,7 +47,7 @@
         <div class="w-1/2 p-4 space-y-4">
           <div class="flex gap-2 items-center">
             <img src="./images/coin.png" alt="" />
-            <p id="donation-fund" class="text-2xl font-semibold">0</p>
+            <p id="noakhali-donation-fund" class="text-2xl font-semibold">0</p>
             <p class="text-2xl font-semibold">BDT</p>
           </div>
           <h3 class="text-2xl font-bold">
@@ -61,16 +62,18 @@
             need.
           </p>
           <input
-          id="input-field"
+          id="noakhali-floode-input-field"
             type="text"
-            placeholder="Type here"
+            placeholder="Please amount here"
             class="input input-bordered w-full"
           />
           <div>
-            <button id="donate-btn" class="btn w-full mt-4 bg-lime-400">Donate Now</button>
+            <button id="noakhali-donate-btn" class="btn w-full mt-4 bg-lime-400">Donate Now</button>
           </div>
         </div>
       </div>
+
+      <!-- Feni floode  -->
       <div
         class="flex gap-8 mt-8 bg-white shadow-2xl rounded-md p-10 border-slate-100"
       >
@@ -80,7 +83,7 @@
         <div class="w-1/2 p-4 space-y-4">
           <div class="flex gap-2 items-center">
             <img src="./images/coin.png" alt="" />
-            <p class="text-2xl font-semibold">9500</p>
+            <p id="feni-donation-fund" class="text-2xl font-semibold">5000</p>
             <p class="text-2xl font-semibold">BDT</p>
           </div>
           <h3 class="text-2xl font-bold">
@@ -97,25 +100,28 @@
             need.
           </p>
           <input
+          id="feni-floode-input-field"
             type="text"
-            placeholder="Type here"
+            placeholder="Please amount here"
             class="input input-bordered w-full"
           />
           <div>
-            <button class="btn w-full mt-2 bg-lime-400">Donate Now</button>
+            <button id="feni-donate-btn" class="btn w-full mt-2 bg-lime-400">Donate Now</button>
           </div>
         </div>
       </div>
       <div
         class="flex gap-8 mt-8 bg-white shadow-2xl rounded-md p-10 border-slate-100"
       >
+
+      <!-- Quota donation  -->
         <div class="w-1/2">
           <img class="w-full h-96" src="./images/quota-protest.png" alt="" />
         </div>
         <div class="w-1/2 p-4 space-y-4">
           <div class="flex gap-2 items-center">
             <img src="./images/coin.png" alt="" />
-            <p class="text-2xl font-semibold">9500</p>
+            <p id="quota-donation-fund" class="text-2xl font-semibold">1500</p>
             <p class="text-2xl font-semibold">BDT</p>
           </div>
           <h3 class="text-2xl font-bold">
@@ -133,30 +139,19 @@
             their time of need.
           </p>
           <input
+          id="quota-input-field"
             type="text"
-            placeholder="Type here"
+            placeholder="Please amount here"
             class="input input-bordered w-full"
           />
           <div>
-            <button class="btn w-full mt-2 bg-lime-400">Donate Now</button>
+            <button id="quota-donate-btn" class="btn w-full mt-2 bg-lime-400">Donate Now</button>
           </div>
         </div>
       </div>
     </main>
 
-    <script>
-      document.getElementById("donate-btn").addEventListener("click" , function(){
-        const inputField = parseFloat(document.getElementById("input-field").value);
-        // console.log(inputField);
-        const donationFund = parseFloat(document.getElementById("donation-fund").innerText);
-        const donateMoney = parseFloat(document.getElementById("donation-money").innerText);
-        const newDonationMoney = donateMoney -inputField
-        // console.log(donationFund);
-        const newDonationFund = donationFund + inputField;
-        document.getElementById("donation-fund").innerText=newDonationFund
-        document.getElementById("donation-money").innerText=newDonationMoney
-        
-      })
-    </script>
+ <script src="/utils.js"></script>
+ <script src="/script.js"></script>
   </body>
 </html>
